@@ -16,6 +16,7 @@ class Family extends Model
         'relationship_id',
         'name',
         'dob',
+        'parent_id',
     ];
 
     /**
@@ -27,4 +28,26 @@ class Family extends Model
     {
         return $this->belongsTo(Relationship::class, 'relationship_id', 'id');
     }
+
+
+    /**
+     * Get the parent of the Family
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function parent()
+    {
+        return $this->belongsTo(Family::class, 'parent_id');
+    }
+
+    /**
+     * Get the children of the Family
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function children()
+    {
+        return $this->hasMany(Family::class, 'parent_id');
+    }
+
 }

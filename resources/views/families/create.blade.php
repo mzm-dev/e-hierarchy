@@ -20,6 +20,16 @@
 
                     </div>
                     <div class="form-group">
+                        <label class="form-label">Ibu/Bapa</label>
+                        <select name="parent_id" class="form-control">
+                            <option value="">Tiada</option>
+                            @foreach ($families as $family)
+                                <option value="{{ $family->id }}" {{ old('parent_id') == $family->id ? 'selected' : '' }}>
+                                    {{ $family->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="relationship_id">Relationship</label>
                         <select name="relationship_id" id="relationship_id"
                             class="form-control @error('relationship_id')is-invalid @enderror">

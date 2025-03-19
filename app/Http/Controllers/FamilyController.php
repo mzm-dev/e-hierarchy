@@ -24,8 +24,9 @@ class FamilyController extends Controller
     {
         //utk data dropdown
         $relationships = Relationship::pluck('name', 'id');
+        $families = Family::all();
 
-        return view('families.create', compact('relationships'));
+        return view('families.create', compact('relationships', 'families'));
     }
 
     /**
@@ -35,6 +36,7 @@ class FamilyController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:families,name',
+            'parent_id' => 'nullable|exists:families,id',
             'relationship_id' => 'required',
             'dob' => 'nullable',
         ]);
@@ -50,7 +52,9 @@ class FamilyController extends Controller
      */
     public function edit(Family $family)
     {
-        return view('families.edit', compact('family'));
+        $relationships = Relationship::pluck('name', 'id');
+        $families = Family::where('id', '!=', $family->id)->get();
+        return view('families.edit', compact('family', 'relationships', 'families'));
     }
 
     /**
@@ -60,6 +64,7 @@ class FamilyController extends Controller
     {
         $request->validate([
             'name' => 'required|string|unique:families,name,' . $family->id,
+            'parent_id' => 'nullable|exists:families,id',
             'relation_id' => 'required',
             'dob' => 'nullable|date',
         ]);

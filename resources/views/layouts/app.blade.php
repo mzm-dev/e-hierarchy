@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Checkout CRUD Laravel 12</title>
+    <title>Aplikasi CRUD E-Hierarchy</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,7 +17,7 @@
         <div class="py-5 text-center">
             <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
                 alt="" width="72" height="72">
-            <h2>Aplikasi CRUD dalam Laravel 12</h2>
+            <h2>Aplikasi CRUD E-Hierarchy</h2>
             <p class="lead">Panduan Langkah demi Langkah</p>
         </div>
 
