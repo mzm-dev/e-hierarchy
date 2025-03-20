@@ -30,6 +30,9 @@
                                     {{ $fmly->name }}</option>
                             @endforeach
                         </select>
+                        @error('parent_id')
+                            <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="relationship_id">Relationship</label>

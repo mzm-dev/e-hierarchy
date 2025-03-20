@@ -69,8 +69,8 @@ class FamilyController extends Controller
         $request->validate([
             'name' => 'required|string|unique:families,name,' . $family->id,
             'parent_id' => 'nullable|exists:families,id',
-            'relation_id' => 'required',
-            'dob' => 'nullable|date',
+            'relationship_id' => 'required',
+            'dob' => 'nullable',
         ]);
 
         $family->update($request->all());

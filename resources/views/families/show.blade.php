@@ -10,6 +10,8 @@
                 <dl class="row">
                     <dt class="col-sm-3">Name</dt>
                     <dd class="col-sm-9">{{ $family->name }}</dd>
+                    <dt class="col-sm-3">DOB</dt>
+                    <dd class="col-sm-9">{{ $family->dob }}</dd>
                     <dt class="col-sm-3">Parent</dt>
                     <dd class="col-sm-9">{{ $family->parent->name ?? 'Tiada' }}</dd>
                     <dt class="col-sm-3">Relationship</dt>
