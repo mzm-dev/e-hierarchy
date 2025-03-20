@@ -50,6 +50,10 @@ class FamilyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    public function show(Family $family)
+    {
+        return view('families.show', compact('family'));
+    }
     public function edit(Family $family)
     {
         $relationships = Relationship::pluck('name', 'id');

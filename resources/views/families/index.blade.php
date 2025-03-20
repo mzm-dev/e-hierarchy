@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Relationship Manager
+                Family Manager
             </div>
             <div class="card-body">
                 <a href="{{ route('families.create') }}" class="btn btn-primary mb-3">Create Relationship</a>

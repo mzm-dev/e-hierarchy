@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Create Relationship
+                Create Family
             </div>
             <div class="card-body">
                 <form action="{{ route('families.store') }}" method="POST">

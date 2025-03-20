@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Edit Relationship
+                Edit Family
             </div>
             <div class="card-body">
                 <form action="{{ route('families.update', $family) }}" method="POST">
