@@ -13,14 +13,14 @@
                     <dt class="col-sm-3">DOB</dt>
                     <dd class="col-sm-9">{{ $family->dob }}</dd>
                     <dt class="col-sm-3">Parent</dt>
-                    <dd class="col-sm-9">{{ $family->parent->name ?? 'Tiada' }}</dd>
+                    <dd class="col-sm-9">{{ $family->penjaga->name ?? 'Tiada' }}</dd>
                     <dt class="col-sm-3">Relationship</dt>
                     <dd class="col-sm-9">{{ $family->hubungan->name }}</dd>
 
                     <dt class="col-sm-3">Children</dt>
                     <dd class="col-sm-9">
                         <ul>
-                            @forelse ($family->children as $child)
+                            @forelse ($family->anak as $child)
                                 <li>
                                     {{ $child->name }} ({{ $child->hubungan->name }})
                                 </li>

@@ -36,7 +36,7 @@
                                     </td>
                                 </tr>
                             @endif
-                            @foreach ($family->children as $child)
+                            @foreach ($family->anak as $child)
                                 <tr>
                                     <td>&#10551; {{ $child->name }}</td>
                                     <td>{{ $child->hubungan->name }}</td>

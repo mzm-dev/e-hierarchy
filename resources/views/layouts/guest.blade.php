@@ -22,10 +22,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2 mb-4">
-                @include('layouts.partials.nav')
-            </div>
-            <div class="col-md-10 order-md-1">
+            <div class="col-md-10 order-md-1 mx-auto">
                 @yield('content')
             </div>
         </div>

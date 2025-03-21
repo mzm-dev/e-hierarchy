@@ -35,9 +35,9 @@ class Family extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function parent()
+    public function penjaga()
     {
-        return $this->belongsTo(Family::class, 'parent_id');
+        return $this->belongsTo(Family::class, 'parent_id'); // parent_id is null
     }
 
     /**
@@ -45,9 +45,9 @@ class Family extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function children()
+    public function anak()
     {
-        return $this->hasMany(Family::class, 'parent_id');
+        return $this->hasMany(Family::class, 'parent_id');// parent_id is not null
     }
 
 }
